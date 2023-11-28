@@ -30,7 +30,7 @@
             li {
                 margin-right: 80px;
 
-                a {
+                a, button {
                     font-size: 16px;
                     text-decoration: none;
                     font-weight: bold;
@@ -39,6 +39,13 @@
                     &:hover {
                         color: $color-primary;
                     }
+                }
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }

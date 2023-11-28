@@ -37,7 +37,7 @@
             }
         }
 
-        button {
+        a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -47,6 +47,7 @@
             border-radius: 10px;
             font-size: 1rem;
             color: $color-white;
+            text-decoration: none;
 
             svg {
                 margin-left: 10px;

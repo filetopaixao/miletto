@@ -3,7 +3,7 @@ import Logo from '../../assets/images/logo.png';
 import { Menu, Close } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import {API_BASEURL} from "../../settings";
-const Header = () => {
+const Header = ({ sectionAboutUsRef, sectionContactRef }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(false);
 
     return (
@@ -20,9 +20,17 @@ const Header = () => {
             </button>
             <ul>
                 <li><Link to="/">Início</Link></li>
-                <li><Link to="/sobre-nos">Quem Somos</Link></li>
+                <li>
+                    <button onClick={() => {sectionAboutUsRef.current?.scrollIntoView({ behavior: 'smooth' })}}>
+                        Quem Somos
+                    </button>
+                </li>
                 <li><a href={API_BASEURL}>Blog</a></li>
-                <li><Link to="/contato">Contato</Link></li>
+                <li>
+                    <button onClick={() => {sectionContactRef.current?.scrollIntoView({ behavior: 'smooth' })}}>
+                        Contato
+                    </button>
+                </li>
             </ul>
           </div>
       </header>

@@ -1,3 +1,4 @@
+import React from 'react';
 import SectionTop from "../sections/SectionTop";
 import SectionAboutUs from "../sections/SectionAboutUs";
 import SectionOurProducts from "../sections/SectionOurProducts";
@@ -10,20 +11,28 @@ import SectionBlog from "../sections/SectionBlog";
 import Footer from "../sections/Footer";
 
 const Home = () => {
-    return (
+    const sectionAboutUsRef = React.useRef(null);
+    const sectionContactRef = React.useRef(null);
 
+    return (
         <div className="Home">
             <main>
-                <SectionTop />
-                <SectionAboutUs />
+                <SectionTop
+                    sectionAboutUsRef={sectionAboutUsRef}
+                    sectionContactRef={sectionContactRef}
+                />
+                <SectionAboutUs sectionAboutUsRef={sectionAboutUsRef} />
                 <SectionOurProducts />
                 <SectionMeta />
                 <SectionWorks />
                 <SectionTestimonials />
                 <SectionLocation />
-                <SectionContact />
+                <SectionContact sectionContactRef={sectionContactRef} />
                 <SectionBlog />
-                <Footer />
+                <Footer
+                    sectionAboutUsRef={sectionAboutUsRef}
+                    sectionContactRef={sectionContactRef}
+                />
             </main>
         </div>
     );

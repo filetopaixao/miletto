@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 import { useOnScreen } from '../../utils/useOnScreen';
 
 
-const SectionAboutUs = () => {
+const SectionAboutUs = ({ sectionAboutUsRef }) => {
     const [isVisibleState, setIsVisibleState] = React.useState(false);
 
     const visibilityRef = React.useRef(null);
@@ -23,7 +23,7 @@ const SectionAboutUs = () => {
     }, [isVisible]);
 
     return (
-        <div className="about-us">
+        <div className="about-us" ref={sectionAboutUsRef}>
             <div className="about-us__wrap">
                 <div className="about-us__wrap__image">
                     <img src={Blob100} className="about-us__wrap__image__blob100"/>
@@ -39,7 +39,7 @@ const SectionAboutUs = () => {
                 <Slide direction="up" in={isVisibleState}  mountOnEnter unmountOnExit timeout={2000}>
                     <div className="about-us__wrap__copy">
                         <h1>Sobre Nós</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet elementum ante. Sed mattis sapien vel vestibulum lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce a fermentum leo. Integer sem nulla, pretium vel purus vel, venenatis vehicula turpis.</p>
+                        <p>Somos uma empresa genuinamente tocantinense, com fabricação própria, somos industria e comercio. Temos como propósito trazer sabor, qualidade e momentos de prazer para nossos clientes. Atuamos há mais de 8 anos no mercado, atendendo a capital Palmas/TO, além de cidades vizinhas, num raio de 250 km. Nossos canais de venda são: ponto de venda em comércios, venda direta ao consumidor final e por meio de ambulantes (carrinhos).</p>
                         <Link to="/sobre-nos">Ler mais</Link>
                     </div>
                 </Slide>

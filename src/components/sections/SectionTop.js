@@ -5,7 +5,7 @@ import { Fade } from '@mui/material';
 import Wave from "../../assets/images/wave.png";
 
 
-const SectionTop = () => {
+const SectionTop = ({ sectionAboutUsRef, sectionContactRef }) => {
     const [animationStart, setAnimationStart] = React.useState(false);
 
     React.useEffect(() => {
@@ -14,7 +14,10 @@ const SectionTop = () => {
 
     return (
         <div className="section-top">
-            <Header />
+            <Header
+                sectionAboutUsRef={sectionAboutUsRef}
+                sectionContactRef={sectionContactRef}
+            />
             <img className="section-top__wave-overlay" src={Wave} />
             <Fade in={animationStart} timeout={4000}>
                 <div>
