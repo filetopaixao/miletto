@@ -1,0 +1,82 @@
+.section-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../images/patt.jpg");
+    background-size: cover;
+    padding: 100px 0;
+
+    h1 {
+        color: $color-black;
+    }
+
+    &__form {
+        width: 50%;
+        display: flex;
+
+        &__input {
+            display: flex;
+            align-items: center;
+            background-color: $color-white;
+            border-radius: 10px;
+            padding: 15px 10px;
+            width: 70%;
+            margin-right: 15px;
+
+            input {
+                border: none;
+                font-size: 16px;
+                color: $color-grey;
+                width: 100%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            border: none;
+            background-color: $color-secondary;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: $color-white;
+
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        h1 {
+            text-align: center;
+
+            .primary {
+                color: $color-white;
+            }
+        }
+
+        &__form {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            &__input {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            button {
+                width: 200px;
+                padding: 15px;
+            }
+        }
+    }
+}

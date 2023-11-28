@@ -1,0 +1,67 @@
+.section-testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 100px;
+
+    &__wrap {
+        width: 100%;
+
+        h1 {
+            margin: 0;
+            color: $color-black;
+        }
+
+        &__slide {
+            width: 33.33%;
+            padding: 20px;
+            border-radius: 20px;
+
+            &__content {
+                &__people {
+                    display: flex;
+                    position: relative;
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                    }
+
+                    div {
+                        h2 {
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: $color-black;
+                            margin-bottom: -10px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: $color-primary;
+                        }
+                    }
+
+                    .quotes {
+                        position: absolute;
+                        right: 20px;
+                        width: 48px;
+                        height: 40px;
+                        bottom: 0;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 50px;
+
+        &__wrap {
+            text-align: center;
+        }
+    }
+}

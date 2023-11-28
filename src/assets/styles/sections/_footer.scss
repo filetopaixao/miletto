@@ -1,0 +1,126 @@
+.footer {
+    background-color: $color-primary;
+    position: relative;
+    margin-top: 50px;
+
+    &__wave {
+        height: 90px;
+        width: 100%;
+        top: -90px;
+        position: absolute;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: $color-primary;
+        color: $color-white;
+        padding-bottom: 30px;
+
+        &__content {
+            display: flex;
+            padding: 0 100px;
+            width: 100%;
+
+            img {
+                width: 100px;
+            }
+
+            &__column {
+                width: 30%;
+
+                &__social {
+                    display: flex;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background-color: $color-secondary;
+                        margin-right: 10px;
+
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                            fill: $color-white;
+                        }
+                    }
+                }
+
+                ul {
+                    padding: 0;
+                    list-style-type: none;
+                    line-height: 45px;
+
+                    li {
+                        a {
+                            font-size: 16px;
+                            text-decoration: none;
+                            color: $color-white;
+
+                            &:hover {
+                                color: $color-secondary;
+                            }
+                        }
+                    }
+                }
+
+                &__contact {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    div {
+                        p {
+                            line-height: 5px;
+                        }
+                    }
+
+                    svg {
+                        margin-right: 10px;
+                        fill: $color-secondary;
+                    }
+                }
+            }
+
+            &__column.um {
+                width: 40%;
+                font-size: 1rem;
+                margin-right: 80px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &__wrap {
+            text-align: center;
+
+            &__content {
+                flex-direction: column;
+
+                &__column {
+                    width: 100%;
+
+                    &__social {
+                        justify-content: center;
+                    }
+
+                    ul {
+                        li {
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                &__column.um {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

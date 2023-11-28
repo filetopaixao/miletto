@@ -1,0 +1,104 @@
+.header {
+    display: flex;
+    padding: 20px 160px 0 160px;
+    height: 75px;
+    background-color: $color-secondary;
+
+    &__logo {
+        width: 50%;
+
+        img {
+            position: relative;
+            width: 100px;
+            z-index: 3;
+        }
+    }
+
+    &__collapse-btn {
+        display: none;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                margin-right: 80px;
+
+                a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+
+        &__close-btn {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 10px 40px;
+
+        &__collapse-btn {
+            position: relative;
+            right: -120px;
+            top: 30px;
+            display: flex;
+            background-color: transparent;
+            border: none;
+
+            svg {
+                fill: $color-black;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__menu {
+            position: absolute;
+            right: -190px;
+            height: 100%;
+            width: 190px;
+            background-color: $color-secondary;
+            z-index: 3;
+            transition: all 0.5s ease-out;
+
+            ul {
+                flex-direction: column;
+                height: 100%;
+
+                li {
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__close-btn {
+                display: block;
+                position: absolute;
+                top: 0;
+                background-color: transparent;
+                border: none;
+                left: -30px;
+
+                svg {
+                    fill: $color-black;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
